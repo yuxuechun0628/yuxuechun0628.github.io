@@ -41,13 +41,23 @@
     .mobile-toggle svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2; }
 
     /* LAYOUT */
-    .page-wrapper { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 260px 1fr; min-height: calc(100vh - 48px); }
+    .page-wrapper { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr; min-height: calc(100vh - 48px); }
 
     /* SIDEBAR */
     .sidebar { padding: 2.5rem 1.8rem 2rem 2rem; position: sticky; top: 48px; height: fit-content; max-height: calc(100vh - 48px); overflow-y: auto; }
-    .sidebar-photo { width: 180px; height: 210px; border-radius: 4px; overflow: hidden; background: #eee; margin-bottom: 1.2rem; border: 1px solid var(--border); }
+    .sidebar-photo { width: 180px; height: 210px; border-radius: 8px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06); overflow: hidden; background: #eee; margin-bottom: 1.2rem; border: 1px solid var(--border); }
     .sidebar h1 { font-family: 'EB Garamond', serif; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.2rem; line-height: 1.25; }
     .sidebar .title-line { font-size: 0.88rem; color: var(--text-light); margin-bottom: 1rem; line-height: 1.5; }
+    .phd-status {
+      display: inline-block;
+      margin-bottom: 1.1rem;
+      padding: 0.22rem 0.55rem;
+      font-size: 0.72rem;
+      color: var(--accent);
+      background: #f0f4f8;
+      border-radius: 3px;
+      font-weight: 500;
+    }
     .sidebar-section { margin-bottom: 1.2rem; }
     .sidebar-section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-bottom: 0.4rem; }
     .sidebar-links { list-style: none; }
@@ -58,7 +68,7 @@
     .sidebar-links .filled-icon { fill: currentColor; stroke: none; }
 
     /* MAIN */
-    .main { padding: 2.5rem 2rem 3rem 2.5rem; border-left: 1px solid var(--border); }
+    .main { padding: 3rem 2.8rem 4rem 3rem; border-left: 1px solid var(--border); }
     .section { margin-bottom: 3rem; }
     .section:last-child { margin-bottom: 0; }
     .section-title { font-family: 'EB Garamond', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent); display: inline-block; }
@@ -67,7 +77,7 @@
     .bio-text { line-height: 1.75; max-width: 640px; }
     .bio-text p { margin-bottom: 0.8rem; }
     .interests-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; list-style: none; }
-    .interests-list li { font-size: 0.82rem; padding: 0.25rem 0.65rem; background: #f0f4f8; border-radius: 3px; color: var(--accent); font-weight: 500; }
+    .interests-list li { font-size: 0.82rem; padding: 0.25rem 0.7rem; background: #f0f4f8; border-radius: 12px; color: var(--accent); font-weight: 500; }
 
     /* NEWS */
     .news-list { list-style: none; }
@@ -80,7 +90,7 @@
     .pub-list { list-style: none; }
     .pub-item { padding: 0.9rem 0; border-bottom: 1px solid #f0f0f0; }
     .pub-item:last-child { border-bottom: none; }
-    .pub-title-text { font-family: 'EB Garamond', serif; font-size: 1.05rem; font-weight: 600; line-height: 1.4; }
+    .pub-title-text { font-family: 'EB Garamond', serif; font-size: 1rem; font-weight: 600; line-height: 1.35; }
     .pub-authors { font-size: 0.88rem; color: var(--text-light); margin-top: 0.15rem; }
     .pub-authors .me { font-weight: 600; color: var(--text); }
     .pub-venue-line { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.15rem; }
@@ -106,7 +116,15 @@
     .cv-download svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
 
     /* SKILLS */
-    .skills-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem; }
+    .skills-grid { display: grid; 
+                  grid-template-columns: repeat(2, minmax(0, 1fr));
+                  gap: 1.2rem 2rem; 
+                 }
+    @media (max-width: 520px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
     .skill-group { flex: 1; min-width: 200px; }
     .skill-group-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 0.3rem; }
     .skill-group p { font-size: 0.88rem; color: var(--text-light); line-height: 1.6; }
@@ -163,9 +181,10 @@
     <div class="sidebar-info">
       <h1>Xuechun Yu</h1>
       <div class="title-line">
-        Urban Researcher in GeoAI &amp; Spatial Data Science<br> 
-        Prospective Ph.D. Applicant for Fall 2027
+        Urban Researcher<br>
+        GeoAI &amp; Spatial Data Science
       </div>
+      <div class="phd-status">Fall 2027 Ph.D. Applicant</div>
 
       <div class="sidebar-section">
         <div class="sidebar-section-label">Affiliation</div>
@@ -211,23 +230,19 @@
           My research examines how computational representations of cities capture human experiences across places and social groups.
         </p>
 
-        <p>I currently work as a Research Assistant on multimodal urban sensing and GeoAI projects involving large-scale geotagged audio processing, 
-          acoustic feature extraction, dataset construction. My independent research uses spatial analysis, machine learning, and UGC to study children's park experiences and age-specific urban resources.
+        <p>I currently work as a Research Assistant at UT Austin on multimodal urban sensing and GeoAI research. My broader interests include urban inequality, human-centered urban analytics, and the use of spatial and user-generated data to understand age-specific urban experiences..
         </p>
 
-        <p>Previously, I worked at the China Academy of Urban Planning and Design, where I contributed to child-friendly urban assessment and public-space projects commissioned by UNICEF and China's Ministry of Housing and Urban-Rural Development.
-        </p>
       </div>
       
       <div style="margin-top:1rem;">
         <div style="font-size:0.82rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Research Interests</div>
         <ul class="interests-list">
           <li>GeoAI</li>
-          <li>Spatial Data Science</li>
           <li>Multimodal Urban Sensing</li>
-          <li>Urban Inequality</li>
           <li>Human-Centered Urban Analytics</li>
-          <li>User-Generated Geographic Information</li>
+          <li>Urban Inequality</li>
+          <li>User-Generated Data</li>
         </ul>
       </div>
     </div>
@@ -240,9 +255,7 @@
             <span class="news-date">Jun 2026</span>
             <span class="news-content">
             Two abstracts accepted for presentation at the
-            <strong>2026 ACSP Annual Conference</strong>, focusing on
-            age-specific urban resources in New York City and children's
-            park affordances in Los Angeles.
+            <strong>2026 ACSP Annual Conference</strong>
             </span>
           </li>
           
@@ -250,7 +263,7 @@
           <span class="news-date">May 2026</span>
           <span class="news-content">
               Began working as a Research Assistant on
-              <strong>Human-centered GeoAI and Spatial Data Science</strong> research at UT Austin..
+              <strong>Human-centered GeoAI</strong> research at UT Austin.
           </span>
         </li>
           
@@ -268,7 +281,7 @@
       <div class="research-item">
         <h3>Multimodal GeoAI for Urban Environments</h3>
         <p>
-          I contribute to multimodal urban sensing research. My work focuses on developing multimodal GeoAI workflows that integrate acoustic, visual, and environmental data to better characterize complex built environments and support spatially informed prediction. I am particularly interested in how multimodal data represent geographically uneven urban environmental experiences. 
+          My work focuses on developing multimodal GeoAI workflows that integrate acoustic, visual, and environmental data to better characterize complex built environments and support spatially informed prediction. I am particularly interested in how multimodal data represent geographically uneven urban environmental experiences. 
         </p>
       </div>
       
@@ -291,33 +304,34 @@
         <li class="pub-item">
           <div class="pub-title-text">"For a Younger Crowd?": Quantifying the Domain-Specific Divergence of Aging Resources in Gentrifying New York Neighborhoods</div>
           <div class="pub-authors"><span class="me">Xuechun Yu</span></div>
-          <div class="pub-venue-line"><span class="pub-badge badge-conf">Accepted</span>2026 Association of Collegiate Schools of Planning Annual Conference</div>
+          <div class="pub-venue-line"><span class="pub-badge badge-conf">Accepted</span>
+            2026 Association of Collegiate Schools of Planning Annual Conference</div>
         </li>
         <li class="pub-item">
           <div class="pub-title-text">From Installed to Inhabited: Measuring the Gap Between Potential and Actualized Affordances in Children's Parks Through User-Generated Content</div>
           <div class="pub-authors"><span class="me">Xuechun Yu</span></div>
-          <div class="pub-venue-line"><span class="pub-badge badge-conf">Accepted</span>2026 Association of Collegiate Schools of Planning Annual Conference</div>
+          <div class="pub-venue-line"><span class="pub-badge badge-conf">Accepted</span>
+            2026 Association of Collegiate Schools of Planning Annual Conference</div>
         </li>
       </ul>
      </div>
     
-    <div class="cv-subsection-title">Current Research Position</div>
-    <div class="cv-entry">
-      <div class="cv-year">2026–Present</div>
-      <div class="cv-detail">
-        <h3>Research Assistant</h3>
-        <div class="cv-org">GeoAI Research, UT Austin</div>
-        <p>
-          Multimodal urban sensing, geotagged data processing,
-          dataset construction, and built environmental prediction.
-        </p>
-      </div>
     </div>
     
     <!-- CV -->
     <div class="section" id="cv">
       <h2 class="section-title">Education &amp; Experience</h2>
-
+      <div class="cv-subsection-title">Current Research Position</div>
+      <div class="cv-entry">
+        <div class="cv-year">2026–Present</div>
+        <div class="cv-detail">
+          <h3>Research Assistant</h3>
+          <div class="cv-org">GeoAI Research, UT Austin</div>
+          <p>
+            Multimodal urban sensing, geotagged data processing,
+            dataset construction, and built environmental prediction.
+        </p>
+      </div>
       <div class="cv-subsection-title">Education</div>
       <div class="cv-entry">
         <div class="cv-year">2021–2022</div>
@@ -389,27 +403,6 @@
         </div>
       </div>
 
-      <div class="cv-subsection-title">Selected Design Projects</div>
-      <div class="cv-entry">
-        <div class="cv-year">2024–2025</div>
-        <div class="cv-detail">
-          <h3>Changning Yuyuan Road Child-Friendly Street Revitalization</h3>
-          <p>User-centered field research; streetscape and school-route improvements for child and caregiver spatial behavior</p>
-        </div>
-      </div>
-      <div class="cv-entry">
-        <div class="cv-year">2024</div>
-        <div class="cv-detail">
-          <h3>Wuxi Dongting TOD Urban Renewal and Design</h3>
-          <p>TOD-driven renewal with differentiated public space needs across age groups</p>
-        </div>
-      </div>
-      <div class="cv-entry">
-        <div class="cv-year">2023–2024</div>
-        <div class="cv-detail">
-          <h3>Bowang Production-City Integration Demonstration Zone</h3>
-          <p>Park systems, slow-mobility networks, and station-area spatial plans for diverse age groups</p>
-        </div>
       </div>
 
       <div class="cv-subsection-title">Technical Skills</div>
