@@ -1,0 +1,81 @@
+html{background:#101110;scroll-behavior:smooth}
+body{margin:0;background:#101110;color:#f0f0e9;font-family:Arial,Helvetica,sans-serif}
+#xy-pages .website{max-width:1240px;margin:0 auto;padding:38px 58px 25px;min-height:100vh}
+#xy-pages main{min-width:0}
+#xy-pages header a{color:inherit;text-decoration:none}
+#xy-pages nav a{font-size:14px;position:relative;padding:5px 0;display:inline-block}
+#xy-pages nav a[aria-current="page"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--p-text)}
+#xy-pages .brand{display:inline-block;font-family:Georgia,serif;font-size:32px}
+#xy-pages .bio-layout{grid-template-columns:250px minmax(0,1fr);gap:78px;margin-top:65px}
+#xy-pages .portrait img{height:320px}
+#xy-pages .education{font-size:11px;line-height:1.8}
+#xy-pages .education strong{display:inline-block;margin-top:8px;font-weight:400;color:var(--p-text)}
+#xy-pages .website h1{font-size:64px}
+#xy-pages .copy{max-width:665px}
+#xy-pages .copy p{font-size:16px;line-height:1.85}
+#xy-pages .application{font-size:14px;margin-top:25px}
+#xy-pages .recent{grid-template-columns:250px 1fr;gap:78px;margin-top:25px}
+#xy-pages .recent>a{font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+#xy-pages .recent>a span{font-size:12px;color:var(--p-muted)}
+#xy-pages .inline-link,#xy-pages .return-link{display:inline-block}
+#xy-pages .return-link{padding:8px 0}
+#xy-pages .section-opening>p,#xy-pages .research-copy p{font-size:15px}
+#xy-pages .project-title{font-size:38px}
+#xy-pages .method-line,#xy-pages .work-subtitle{font-size:12px}
+#xy-pages .work-meta,#xy-pages .eyebrow,#xy-pages .section-label{font-size:11px}
+#xy-pages .research-image img{height:305px}
+#xy-pages .research-text{align-items:start;padding-top:18px;padding-bottom:38px}
+#xy-pages .research-text .research-copy{padding-top:30px}
+#xy-pages .research-text .project-title{margin-bottom:0}
+#xy-pages .affordance-visual{min-height:305px}
+#xy-pages .practice-entry,#xy-pages .research-image,#xy-pages .affordance-visual{text-decoration:none}
+#xy-pages .work-image{height:auto;aspect-ratio:16/10;background:#1b1e19}
+#xy-pages .work-image img{object-fit:cover;object-position:center;filter:grayscale(1);transition:filter .35s ease}
+#xy-pages .practice-entry:hover .work-image img{transform:none}
+#xy-pages .work-meta{line-height:1.6}
+#xy-pages .work-title{line-height:1.2}
+#xy-pages .work-subtitle{line-height:1.65}
+#xy-pages .practice-entry:focus-visible .work-image img{filter:grayscale(0)}
+#xy-pages .practice-entry:hover,#xy-pages .research-image:hover,#xy-pages .affordance-visual:hover{text-decoration:none}
+@media(hover:hover){#xy-pages .practice-entry:hover .work-image img{filter:grayscale(0)}}
+@media(hover:none){#xy-pages .practice-entry:active .work-image img{filter:grayscale(0)}}
+@media(max-width:540px){#xy-pages .research-text{gap:12px}#xy-pages .research-text .research-copy{padding-top:0}}
+
+#xy-pages footer{margin-top:40px}
+#xy-pages .academic-opening{margin:44px 0 26px}
+#xy-pages .academic-opening h1{margin:0}
+#xy-pages .research-sections{display:flex;flex-wrap:wrap;gap:12px 26px;margin:0;padding:0 0 22px}
+#xy-pages .research-sections a{font-size:13px;color:var(--p-muted);padding:4px 0}
+#xy-pages .academic-section{display:grid;grid-template-columns:240px minmax(0,1fr);gap:50px;border-top:1px solid var(--p-line);padding:34px 0 40px;scroll-margin-top:25px}
+#xy-pages .academic-section h2{font-size:26px;line-height:1.25;margin:0}
+#xy-pages .academic-content{font-size:15px;line-height:1.8;color:var(--p-muted)}
+#xy-pages .academic-content p:last-child{margin-bottom:0}
+#xy-pages .academic-content h3{font-family:Arial,Helvetica,sans-serif;font-size:17px;font-weight:500;line-height:1.5;color:var(--p-text);margin:0 0 8px}
+#xy-pages .academic-entry-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0 20px;align-items:baseline}
+#xy-pages .academic-date,#xy-pages .academic-meta{font-size:12px;color:var(--p-muted)}
+#xy-pages .academic-date{white-space:nowrap}
+#xy-pages .academic-affiliation{font-size:13px;color:var(--p-text);margin:2px 0 16px}
+#xy-pages .academic-content h4{font-size:12px;font-weight:400;color:var(--p-text);letter-spacing:.7px;text-transform:uppercase;margin:26px 0 16px}
+#xy-pages .experience-projects{margin:0;padding:0;list-style:none}
+#xy-pages .experience-projects li{margin:0 0 23px;padding-left:16px;border-left:1px solid var(--p-line)}
+#xy-pages .experience-projects h5{font-size:14px;font-weight:400;line-height:1.6;color:var(--p-text);margin:0 0 4px}
+#xy-pages .experience-projects p{font-size:13px;margin:4px 0 0}
+#xy-pages .experience-projects p.academic-meta{font-size:12px}
+#xy-pages .experience-entry+.experience-entry{border-top:1px solid var(--p-line);margin-top:30px;padding-top:26px}
+#xy-pages .interest-keywords{font-size:12px;margin-top:22px;color:var(--p-text)}
+#xy-pages .conference-list{list-style:none;padding:0;margin:0}
+#xy-pages .conference-list li+li{margin-top:28px}
+#xy-pages .conference-list strong{font-weight:500;color:var(--p-text)}
+#xy-pages .conference-list p{margin-bottom:8px}
+#xy-pages .conference-status{font-size:12px;color:var(--p-text)}
+#xy-pages .ongoing-list article+article{margin-top:24px}
+#xy-pages .ongoing-list h3{font-size:16px;margin-bottom:5px}
+@media(max-width:1000px){#xy-pages .academic-section{grid-template-columns:190px minmax(0,1fr);gap:32px}#xy-pages .academic-section h2{font-size:23px}}
+@media(max-width:750px){#xy-pages .academic-section{grid-template-columns:1fr;gap:22px;padding:28px 0}#xy-pages .academic-section h2 br{display:none}#xy-pages .academic-content{font-size:14px}#xy-pages .research-sections{margin-top:0;gap:8px 20px}#xy-pages .research-sections a{min-height:32px;font-size:12px}}
+.skip-link{position:absolute;left:15px;top:-100px;color:#101110;background:#f0f0e9;padding:10px;z-index:10}
+.skip-link:focus{top:15px}
+#xy-pages a:focus-visible{outline:2px solid #d8e3cd;outline-offset:5px}
+@media(max-width:1000px){#xy-pages .website{padding:30px 38px}#xy-pages header{gap:25px}#xy-pages nav{gap:18px}#xy-pages .bio-layout{grid-template-columns:205px minmax(0,1fr);gap:45px}#xy-pages .portrait img{height:260px}#xy-pages .website h1{font-size:53px}#xy-pages .recent{grid-template-columns:205px 1fr;gap:45px}}
+@media(max-width:750px){#xy-pages .website{padding:25px}#xy-pages header{display:block}#xy-pages nav{margin-top:18px;gap:23px}#xy-pages nav a{font-size:13px;min-height:35px}#xy-pages .bio-layout{grid-template-columns:160px minmax(0,1fr);gap:30px;margin-top:38px}#xy-pages .portrait img{height:206px}#xy-pages .website h1{font-size:41px}#xy-pages .copy p{font-size:14px}#xy-pages .recent{grid-template-columns:160px 1fr;gap:30px}#xy-pages .project-title{font-size:30px}#xy-pages .research-copy p{font-size:14px}}
+@media(max-width:540px){#xy-pages .website{padding:24px 20px}#xy-pages nav{gap:19px}#xy-pages nav a{font-size:12px;min-height:40px}#xy-pages .bio-layout{display:flex;flex-direction:column;gap:30px}#xy-pages .portrait{display:grid;grid-template-columns:125px 1fr;gap:22px;align-items:end;width:100%;padding:0}#xy-pages .portrait img{height:162px}#xy-pages .portrait-caption{margin:0}#xy-pages .bio{width:100%}#xy-pages .website h1{font-size:43px}#xy-pages .copy p{font-size:15px}#xy-pages .recent{grid-template-columns:1fr;gap:12px}#xy-pages .research-image img{height:auto}#xy-pages .detail-opening h1{font-size:38px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

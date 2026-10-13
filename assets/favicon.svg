@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>XY — Xuechun Yu</title>
+  <rect width="64" height="64" rx="8" fill="#101110"/>
+  <g fill="none" stroke="#f0f0e9" stroke-linecap="square" stroke-width="3.2">
+    <path d="M11 17 30 47M30 17 11 47"/>
+    <path d="M35 17 44 32 53 17M44 32V47"/>
+  </g>
+</svg>
